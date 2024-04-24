@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>React App</title>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+      body {
+        margin: 4em;
+        font-size: 16px;
+        font-family: 'Roboto', sans-serif;
+      
+      }
+    </style>
+    <script>
+      // add event listener to the document
+      document.addEventListener('DOMContentLoaded', function() {
+        // get all the elements with the attribute 'ui-component'
+        var elements = document.querySelectorAll('[ui-input]');
+        // loop through all the elements
+        for (var i = 0; i < elements.length; i++) {
+          // get the element
+          var element = elements[i];
+          // get the component name
+          var componentName = element.getAttribute('ui-component');
+          // get the component
+          var component = window[componentName];
+          // create a new instance of the component
+          var instance = new component(element);
+          // call the render method of the component
+          instance.render();
+        }
+      });
+    </script>
+  </head>
+  <body>
+    <ui-body background="ui-grey-50" color="ui-grey-500">
+    <ui-card  size="large" width="100%">
+      <ui-body gap="3em">
+
+        <ui-card size="large" width="500px">
+          <ui-body>
+            <div>
+              <ui-input rounded placeholder="Enter your name" type="checkbox"></ui-input>
+              <ui-text>Enter your name</ui-text>
+            </div>
+          </ui-body>
+        </ui-card>
+
+
+<ui-card size="large" width="500px">
+  <ui-body>
+    <ui-input rounded type="select-multiple">
+      <ui-card elevation="xx-small">
+        <ui-body>
+          <ui-option value="PHP">PHP</ui-option>
+          <ui-option value="C++">C++</ui-option>
+          <ui-option value="Java">Java</ui-option>
+          <ui-option value="Ruby">Ruby</ui-option>
+          <ui-option value="Python">Python</ui-option>
+          <ui-option value="Go">Go</ui-option>
+          <ui-option value="Perl">Perl</ui-option>
+          <ui-option value="Erlang">Erlang</ui-option>
+        </ui-body>
+      </ui-card>
+    </ui-input>
+  </ui-body>
+</ui-card>
+
+<ui-card size="large" width="500px" elevation="large">
+  <ui-body>
+    <ui-input rounded>
+      <ui-card elevation="large">
+        <ui-body>
+          <ui-option value="PHP">PHP</ui-option>
+          <ui-option value="C++">C++</ui-option>
+          <ui-option value="Java">Java</ui-option>
+          <ui-option value="Ruby">Ruby</ui-option>
+          <ui-option value="Python">Python</ui-option>
+          <ui-option value="Go">Go</ui-option>
+          <ui-option value="Perl">Perl</ui-option>
+          <ui-option value="Erlang">Erlang</ui-option>
+        </ui-body>
+      </ui-card>
+    </ui-input>
+  </ui-body>
+</ui-card>
+  
+      </ui-body></ui-card>
+</ui-body>
+
+    <script src="components/common.js"></script>
+    <script src="components/base.js"></script>
+    <script src="components/button.js"></script>
+    <script src="components/card.js"></script>
+    <script src="components/header.js"></script>
+    <script src="components/footer.js"></script>
+    <script src="components/body.js"></script>
+    <script src="components/text.js"></script>
+    <script src="components/image.js"></script>
+    <script src="components/input.js"></script>
+    <script src="components/option.js"></script>
+  </body>
+</html>
