@@ -20,4 +20,3 @@ class Base extends HTMLElement {
   }
 
 }
-
